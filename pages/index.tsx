@@ -1,5 +1,11 @@
+import { Navbar } from "@/components/shared";
+
 const index = () => {
-  return <div className=" text-8xl">index</div>;
+  return (
+    <div>
+      <Navbar />
+    </div>
+  );
 };
 
 export default index;
