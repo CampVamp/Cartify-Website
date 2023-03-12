@@ -6,7 +6,7 @@ import { BsCart4 } from "react-icons/bs";
 const Navbar = () => {
   return (
     <div className="flex flex-col">
-      <div className="flex justify-end gap-6 px-8 h-10 items-center">
+      <div className="flex justify-end gap-6 px-8 h-10 items-center text-neutral-600">
         <div>Return</div>
         <div>Help</div>
         <div>Register/Sign in</div>
@@ -18,7 +18,7 @@ const Navbar = () => {
         <div className="flex gap-8 items-center">
           <div>SHOP</div>
           <div>ESSENTIALS</div>
-          <div className=" text-3xl">Cartify</div>
+          <div className=" text-3xl text-orange-600">Cartify</div>
           <div>BEST SELLERS</div>
           <div>ABOUT US</div>
         </div>
