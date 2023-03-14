@@ -1,13 +1,23 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
-import type { NextApiRequest, NextApiResponse } from 'next'
+import axios, { AxiosInstance } from "axios";
 
-type Data = {
-  name: string
-}
+export const instance: AxiosInstance = axios.create({
+  baseURL: "https://fakestoreapi.com/products",
+});
 
-export default function handler(
-  req: NextApiRequest,
-  res: NextApiResponse<Data>
-) {
-  res.status(200).json({ name: 'John Doe' })
-}
+export const getAllProduct = async () => {
+  try {
+    const fetchProd = await instance.get(`/`);
+    return fetchProd.data;
+  } catch (err) {
+    throw err;
+  }
+};
+
+export const fewProduct = async (id: number) => {
+  try {
+    const fetchProd = await instance.get(`?limit=${id}`);
+    return fetchProd.data;
+  } catch (err) {
+    throw err;
+  }
+};
